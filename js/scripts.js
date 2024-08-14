@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mencegah default action dari tombol
         event.preventDefault();
 
+        // Validasi jenis kelamin
+        const jenisKelamin = document.querySelector('input[name="jenis-kelamin"]:checked');
+        if (!jenisKelamin) {
+            alert('Silakan pilih jenis kelamin.');
+            return;
+        }
+
+        // Validasi umur
+        const umur = document.querySelector('.umur').value;
+        if (!umur || isNaN(umur) || umur <= 0) {
+            alert('Silakan masukkan umur yang valid.');
+            return;
+        }
+
         // Mengambil nilai berat dan tinggi dari input
         const berat = parseFloat(document.querySelector('.berat').value);
         const tinggi = parseFloat(document.querySelector('.tinggi').value) / 100; // Mengubah satuan tinggi dari cm ke m
