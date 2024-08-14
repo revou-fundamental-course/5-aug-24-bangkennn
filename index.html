@@ -1,37 +1,135 @@
 <!DOCTYPE html>
+<!-- Deklarasi dokumen HTML -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <!-- Mengatur karakter encoding untuk UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mengatur tampilan pada perangkat mobile -->
     <title>KALKULATOR BMI</title>
+    <!-- Judul halaman -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Menghubungkan file CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Menghubungkan ke Google Fonts untuk preconnect -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Menghubungkan ke Google Fonts untuk preconnect dengan crossorigin -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Menghubungkan font Poppins dari Google Fonts -->
 </head>
 
 <body>
-
+    <!-- Bagian tubuh dari dokumen HTML -->
     <header>
+        <!-- Bagian header dari dokumen HTML -->
         <h1>Kalkulator BMI</h1>
+        <!-- Judul header -->
     </header>
 
-
-    <main>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, qui! Ratione animi odio adipisci obcaecati consequuntur rem magnam dicta tenetur necessitatibus voluptas aut consectetur ullam doloribus autem tempora incidunt, architecto molestiae atque ab aperiam. Voluptas, fugit nemo! Dicta, ex soluta? Quod quae illo beatae dolorem quasi officia totam eligendi laudantium!</p>
+    <aside>
+        <!-- Bagian samping dari dokumen HTML -->
+        <main>
+            <!-- Bagian utama dari dokumen HTML -->
+            <p>Berat badan ideal adalah impian semua orang, tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang dikalkulator BMI.</p>
+            <!-- Paragraf penjelasan -->
                 
-        <form>
-            <h3>Jenis Kelamin</h3>
-                <input type="radio" id="pria" name="jenis-kelamin" value="pria"><label for="pria">Pria</label>
-                <input type="radio" id="wanita" name="jenis-kelamin" value="wanita"><label for="wanita">Wanita</label>
+            <form>
+                <!-- Formulir untuk input data -->
+                <h3>Jenis Kelamin</h3>
+                <!-- Judul formulir -->
+                <input class="JenisKelamin" type="radio" id="pria" name="jenis-kelamin" value="pria">
+                <!-- Input radio untuk jenis kelamin pria -->
+                <label for="pria">Pria</label>
+                <!-- Label untuk input radio pria -->
+                <input class="JenisKelamin" type="radio" id="wanita" name="jenis-kelamin" value="wanita">
+                <!-- Input radio untuk jenis kelamin wanita -->
+                <label for="wanita">Wanita</label>
+                <!-- Label untuk input radio wanita -->
+                <h3>Umur</h3>
+                <!-- Judul formulir -->
+                <input class="umur" type="number">
+                <!-- Input untuk umur -->
+                <h3>Berat Badan (kg)</h3>
+                <!-- Judul formulir -->
+                <input class="berat" type="number">
+                <!-- Input untuk berat badan -->
+                <h3>Tinggi Badan (cm)</h3>
+                <!-- Judul formulir -->
+                <input class="tinggi" type="number">
+                <!-- Input untuk tinggi badan -->
+                <br>
+                <!-- Baris baru -->
+                <button class="hitung">HITUNG BMI</button>
+                <!-- Tombol untuk menghitung BMI -->
+                <button class="reset">RESET</button>
+                <!-- Tombol untuk reset formulir -->
             </form>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sit dolor nostrum odio asperiores quos, eos obcaecati, et ratione quidem id adipisci quisquam? Illo, cumque.</p>
+            <h2>Keunggulan Fitur</h2>
+            <!-- Judul keunggulan fitur -->
+            <ol class="list">
+                <!-- Daftar keunggulan fitur -->
+                <li>Menhitung berat badan</li>
+                <!-- Item daftar keunggulan fitur -->
+                <li>Menentukan kategori berat badan ideal atau tidak</li>
+                <!-- Item daftar keunggulan fitur -->
+                <li>Mempersiapkan program penurunan berat badan</li>
+                <!-- Item daftar keunggulan fitur -->
+            </ol>
+            <br>
+            <!-- Baris baru -->
+            <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter </p>
+            <!-- Paragraf penjelasan -->
+
+            <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indekx Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = kg/m<sup>2</sup></p>
+            <!-- Paragraf penjelasan -->
         </main>
 
-    <footer></footer>
+        <section>
+            <!-- Bagian section dari dokumen HTML -->
+            <h2>HASIL</h2>
+            <!-- Judul hasil -->
+            <div class="hasil">
+                <!-- Bagian hasil -->
+                <p class="data_bmi">Belum ada data.</p>
+                <!-- Paragraf hasil -->
+                <h1 class="hasil-bmi">--</h1>
+                <!-- Judul hasil -->
+                <p class="deskripsi-bmi">belum ada data.</p>
+                <!-- Paragraf deskripsi hasil -->
+                <button class="download-bmi">Download Hasil BMI</button>
+                <!-- Tombol download hasil -->
+            </div>
 
+            <div class="article-bmi">
+                <!-- Bagian artikel BMI -->
+                <br>
+
+                <p class="golongan-bmi"></p>
+                <!-- Paragraf golongan BMI -->
+                <br>
+
+                <p class="penjelasan-golongan"></p>
+                <!-- Paragraf penjelasan golongan -->
+                <br>
+                <button class="konsultasi">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <!-- Tombol konsultasi -->
+                <button class="registrasi">Registrasi Online Ahli Gizi</button>
+                <!-- Tombol registrasi -->
+                <br>
+                <br>
+                <p class="article-default">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <!-- Bagian footer dari dokumen HTML -->
+        <p>&copy; 2024 Kalkulator BMI DAVIAN PUTRA SWARDANA || SEFC by RevoU. Hak Cipta Dilindungi.</p>
+    </footer>
+    <script src="./js/scripts.js"></script>
+    <!-- Menghubungkan file JavaScript -->
 </body>
 
 </html>
