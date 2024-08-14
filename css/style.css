@@ -168,5 +168,26 @@ footer{
   font-size: 12px;    /* Mengatur ukuran font menjadi 12 pixel */
   color: rgb(80, 80, 80);    /* Mengatur warna teks menjadi abu-abu */
   margin-top: 20px;    /* Mengatur margin atas menjadi 20 pixel */
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Mengatur margin bawah untuk footer */
+}
+
+@media (max-width: 768px) { /* Mengatur gaya untuk tampilan mobile */
+  aside{
+    flex-direction: column; /* Mengubah arah flex menjadi kolom untuk aside */
+    width: 87%; /* Mengatur lebar untuk aside */
+  }
+
+  main{
+    width: 79%; /* Mengatur lebar untuk main */
+    margin-top: 30px; /* Mengatur margin atas untuk main */
+  }
+
+  section{
+    width: 79%; /* Mengatur lebar untuk section */
+  }
+
+  header{
+    position: fixed; /* Mengatur posisi header menjadi tetap */
+    width: 100%; /* Mengatur lebar untuk header */
+  }
 }
